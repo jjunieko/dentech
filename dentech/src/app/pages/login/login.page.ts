@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
     private toastCtrl: ToastController,
     public keyboard: Keyboard
   ) { }
-
+l
   ngOnInit() { }
 
   segmentChanged(event: any) {

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dentech-db4af": {
+      "hosting": {
+        "app": [
+          "dentech-db4af"
+        ]
+      }
+    }
+  }
+}
