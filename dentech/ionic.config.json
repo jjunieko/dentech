@@ -1,0 +1,7 @@
+{
+  "name": "dentech",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

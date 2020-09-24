@@ -1,0 +1,17 @@
+Perfil Paciente:
+-- (foto + nome)
+-- resumo do prontuario (status do tratamento);
+-- prontuario com arquivos (imagens, PDF);
+-- pedidos de exames (código, assinatura);
+
+menu:
+- Pacientes (listagem);
+- janela de chat (audio, video, imagens, texto, arquivos);
+- receituário;
+- perfil paciente;
+- documentos de cuidados (DICAS pós cirúrgico , como escovar dentes, etc);
+- Login
+
+
+
+Cor dos icones 129d4c verde azul 2b328c usar branco e zinza claro.
