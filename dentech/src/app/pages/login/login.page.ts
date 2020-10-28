@@ -1,15 +1,13 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonSlides, LoadingController, ToastController } from '@ionic/angular';
-import { User } from 'src/app/interfaces/user';
-import { AuthService } from 'src/app/services/auth.service';
-import { Keyboard } from '@ionic-native/keyboard/ngx';
-
-
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonSlides, LoadingController, ToastController } from "@ionic/angular";
+import { User } from "src/app/interfaces/user";
+import { AuthService } from "src/app/services/auth.service";
+import { Keyboard } from "@ionic-native/keyboard/ngx";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: "app-login",
+  templateUrl: "./login.page.html",
+  styleUrls: ["./login.page.scss"],
 })
 export class LoginPage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
@@ -24,12 +22,12 @@ export class LoginPage implements OnInit {
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     public keyboard: Keyboard
-  ) { }
-l
-  ngOnInit() { }
+  ) {}
+  l;
+  ngOnInit() {}
 
   segmentChanged(event: any) {
-    if (event.detail.value === 'login') {
+    if (event.detail.value === "login") {
       this.slides.slidePrev();
       this.wavesPosition += this.wavesDifference;
     } else {
@@ -44,7 +42,7 @@ l
     try {
       await this.authService.login(this.userLogin);
     } catch (error) {
-      this.presentToast(error.message);
+      this.presentToast(error.message + "incluir dados");
     } finally {
       this.loading.dismiss();
     }
@@ -63,8 +61,25 @@ l
   }
 
   async presentLoading() {
-    this.loading = await this.loadingCtrl.create({ message: 'Aguarde...' });
-    return this.loading.present();
+    this.loading = await this.loadingCtrl.create({ message: "Aguarde..." });
+    await this.loading.present();
+
+    /*  try{
+      await this.authService.register(this.userRegister);
+    }catch(error) {
+      let message: string;
+
+      switch(error.code) {
+        case 'auth/email-a-already-in-use':
+          message = 'E-mail sendo usado...';
+          break;
+
+         case 'auth/invalid-email':
+          message = 'E-mail inválido';
+          break;
+      }
+      
+    } */
   }
 
   async presentToast(message: string) {

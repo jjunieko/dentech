@@ -1,9 +1,12 @@
 
 <ion-content class="swiper-no-swiping">
+
+  
   <div class="container top" [hidden]="keyboard.isVisible">
-    <img src="../../../assets/img/logo.jpeg">
+    <img class="ion-margin-topo"  src="../../../assets/img/Dentech 5.jpg">
 
     <ion-segment (ionChange)="segmentChanged($event)" mode="ios" value="login">
+      
       <ion-segment-button mode="ios" value="login">
         <ion-label>Login</ion-label>
       </ion-segment-button>
@@ -23,6 +26,7 @@
         </ion-item>
 
         <ion-item class="ion-margin-top" lines="none">
+          
           <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.password"></ion-input>
         </ion-item>
 
@@ -59,7 +63,7 @@
     <div class="logoS2" [ngStyle]="{'background-position-x': wavesPosition + 'px'}"></div>
 
     <div class="container bottom ion-text-center" [hidden]="keyboard.isVisible">
-      <span>O aplicativo que foi feito para cadastrar remedios</span>
+      <span>Pela alegria de sorir! </span>
     </div>
   </div>
 </ion-content>
